@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_horizontal" >
+
+    <com.android.detonate.CView
+        android:id="@+id/surfaceView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        class="com.android.detonate.GameView"
+    />
+
+   <RelativeLayout
+        android:id="@+id/weaponPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:id='@+id/linearLayout3'
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <Button
+                    android:id="@+id/rifleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/button_width"
+                    android:minWidth="@dimen/button_width"
+                    android:text="Rifle!" />
+
+                <Button
+                    android:id="@+id/meleeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/button_width"
+                    android:minWidth="@dimen/button_width"
+                    android:text="Melee!" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/grenadeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/button_width"
+                android:minWidth="@dimen/button_width"
+                android:text="Grenade!"
+                android:visibility="visible" />
+
+            
+                
+        </LinearLayout>
+    </RelativeLayout>
+
+   <RelativeLayout
+        android:id="@+id/actionPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:layout_gravity="center_vertical" android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="visible" >
+
+            <com.android.detonate.PlainButton
+                android:id="@+id/ta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/button_width"
+                android:minWidth="@dimen/button_width"
+                android:text="A"
+                android:visibility="visible" android:layout_margin="10dp"/>
+
+            <com.android.detonate.PlainButton
+                android:id="@+id/tb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/ta"
+                android:minHeight="@dimen/button_width"
+                android:minWidth="@dimen/button_width"
+                android:text="B" android:layout_margin="10dp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" android:layout_below="@id/rel" android:layout_centerHorizontal="true">
+
+            <com.android.detonate.PlainButton
+                android:id="@+id/tc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:minHeight="@dimen/button_width"
+                android:minWidth="@dimen/button_width"
+                android:text="C" android:layout_margin="10dp"/>
+        </LinearLayout>
+
+    </RelativeLayout> 
+                
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/weaponPanelTrigger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:minWidth="@dimen/button_width"
+            android:text="Weapons now" />
+    </RelativeLayout>
+
+</FrameLayout>

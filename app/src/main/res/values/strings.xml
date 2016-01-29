@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, detonate!</string>
+    <string name="app_name">detonate</string>
+    <dimen name="button_width">100dp</dimen>
+</resources>
